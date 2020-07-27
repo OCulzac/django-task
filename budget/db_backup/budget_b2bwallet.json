@@ -1,0 +1,12 @@
+[
+{"type":"header","version":"4.9.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"b2broker"},
+{"type":"table","name":"budget_b2bwallet","database":"b2broker","data":
+[
+{"id":"1","label":"BTC","balance":"2430.000000000000000000"},
+{"id":"2","label":"ETH","balance":"105.730000000000000000"},
+{"id":"3","label":"BAT","balance":"3020.350000055400000000"},
+{"id":"4","label":"XRP","balance":"55.980000000000000000"}
+]
+}
+]

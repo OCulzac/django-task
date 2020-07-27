@@ -1,0 +1,71 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3308
+-- Generation Time: Jul 27, 2020 at 09:06 AM
+-- Server version: 5.7.28
+-- PHP Version: 7.3.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `b2broker`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `budget_b2btransactions`
+--
+
+DROP TABLE IF EXISTS `budget_b2btransactions`;
+CREATE TABLE IF NOT EXISTS `budget_b2btransactions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tx_id` varchar(50) NOT NULL,
+  `amount` decimal(36,18) NOT NULL,
+  `wallet_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tx_id` (`tx_id`),
+  KEY `budget_b2btransactions_wallet_id_id_05583320` (`wallet_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `budget_b2btransactions`
+--
+
+INSERT INTO `budget_b2btransactions` (`id`, `tx_id`, `amount`, `wallet_id`) VALUES
+(1, 'A1B1', '6000.000000000000000000', 1),
+(2, 'A1B2', '5000.000000000000000000', 2),
+(3, 'A1B3', '5000.000000000000000000', 3),
+(4, 'A1B4', '-50.000000000000000000', 1),
+(5, 'A1B5', '-995.660000000000000000', 2),
+(6, 'A1B6', '-1589.990000000000000000', 3),
+(7, 'A1B7', '55.630000000000000000', 1),
+(8, 'A1B8', '999.510000000000000000', 2),
+(9, 'A1B9', '-3000.550000000000000000', 3),
+(10, 'A2B1', '-2999.990000000000000000', 1),
+(11, 'A2B2', '-3854.550000000000000000', 2),
+(12, 'A2B3', '2555.890000000000000000', 3),
+(13, 'A2B5', '-555.550000000000000000', 1),
+(14, 'A2B6', '-1099.550000000000000000', 2),
+(15, 'A2B7', '-55.980000000000000000', 1),
+(16, 'A3B9', '55.000000055400000000', 3),
+(17, 'A3B1', '55.980000000000000000', 2),
+(18, 'A3B3', '6.000000000000000000', 1),
+(24, 'A3B5', '55.980000000000000000', 4),
+(22, 'A3B2', '29.890000000000000000', 1);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
